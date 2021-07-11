@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/layout_height"
+    android:layout_height="@dimen/imageview_dimen"
+    android:layout_gravity="center_horizontal"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:background="@drawable/round_corner"
+    android:layout_margin="@dimen/margin_10">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/imageview_dimen"
+                android:layout_height="@dimen/imageview_dimen"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/round_outline"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="@dimen/layout_dimen_176"
+                    android:layout_height="@dimen/margin_25"
+                    android:lines="1"
+                    android:layout_marginBottom="9dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/app_name"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_size_title"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toTopOf="@+id/info"
+                    app:layout_constraintEnd_toEndOf="@+id/info"
+                    app:layout_constraintTop_toTopOf="parent"
+                    card_view:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/info"
+                    android:visibility="gone"
+                    android:layout_width="@dimen/layout_dimen_176"
+                    android:layout_height="@dimen/textview_height"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:paddingStart="@dimen/margin_4"
+                    android:layout_marginBottom="@dimen/margin_30"
+                    android:text="@string/app_name"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
